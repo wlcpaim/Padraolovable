@@ -1,36 +1,43 @@
 :root {
-  --color-primary: #18181b;
-  --color-secondary: #52525b;
-  --color-accent: #3b82f6;
-  --color-background: #fafafa;
-  --color-surface: #ffffff;
-  --color-text: #09090b;
-  --color-muted: #71717a;
-  --color-success: #16a34a;
-  --color-warning: #ca8a04;
-  --color-danger: #dc2626;
-  --color-border: #e4e4e7;
+  --color-primary: #00ffcc;
+  --color-primary-hover: #00cca3;
+  --color-background: #090d16;
+  --color-surface: #111827;
+  --color-surface-hover: #1f2937;
+  --color-border: #1e293b;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-accent: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #fafafa;
-    --color-secondary: #a1a1aa;
-    --color-accent: #60a5fa;
-    --color-background: #09090b;
-    --color-surface: #18181b;
-    --color-text: #fafafa;
-    --color-muted: #a1a1aa;
-    --color-border: #27272a;
-  }
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
 }
 
-.bg-background { background-color: var(--color-background); }
-.bg-surface { background-color: var(--color-surface); }
-.text-text { color: var(--color-text); }
-.text-muted { color: var(--color-muted); }
-.border-border { border-color: var(--color-border); }
+.bg-app-surface { background-color: var(--color-surface); }
+.border-app-border { border-color: var(--color-border); }
+.text-app-muted { color: var(--color-muted); }
+.text-app-primary { color: var(--color-primary); }
+
+.card-enterprise {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
